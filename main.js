@@ -1,5 +1,5 @@
 Vue.component('my-card',{
-	template:`<section class="card">
+	template:`<div><section class="card" v-for="img in imgs">
 <img :src="img" alt="food" class="card__img">
 <div class="card__heading">
 <h2 class="card__heading">Lorem ipsum</h2>
@@ -9,10 +9,10 @@ Vue.component('my-card',{
 	<li class="card__list-item">texttexttexttext</li>
 </ul>
 </div>
-</section>`,
+	</section></div>`,
 	data: function () {
 	    return {
-	      img:'img/food1-sub.jpg'
+	      imgs:['img/food1-sub.jpg','img/food2-sub.jpg','img/food3-sub.jpg','img/food4-sub.jpg']
 	    }
   },
 	computed:{
