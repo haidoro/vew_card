@@ -19,8 +19,6 @@ Vue.component('my-card',{
 		
 	},
 	methods:{
-		myCount:function(){
-			return this.newVal++;
 
 		}
 	}
