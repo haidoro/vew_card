@@ -1,8 +1,8 @@
 Vue.component('my-card',{
-	template:`<div><section class="card" v-for="img in imgs">
-<img :src="img" alt="food" class="card__img">
+	template:`<div><section class="card" v-for="item in items" >
+<img :src="item.img" alt="food" class="card__img">
 <div class="card__heading">
-<h2 class="card__heading">Lorem ipsum</h2>
+<h2 class="card__heading">{{item.heading}}</h2>
 <ul class="card__list">
 	<li class="card__list-item">texttexttexttext</li>
 	<li class="card__list-item">texttexttexttext</li>
@@ -12,9 +12,15 @@ Vue.component('my-card',{
 	</section></div>`,
 	data: function () {
 	    return {
-	      imgs:['img/food1-sub.jpg','img/food2-sub.jpg','img/food3-sub.jpg','img/food4-sub.jpg']
-	    }
-  },
+	  	  items: [
+		      { img:'img/food1-sub.jpg',heading:'Best Lunch' },
+		      { img:'img/food2-sub.jpg',heading:'Best Fruits' },
+		      { img:'img/food3-sub.jpg',heading:'Best Pizza' },
+		      { img:'img/food4-sub.jpg',heading:'Best Dessert' },
+    		]
+  		}
+
+  	},
 	computed:{
 		
 	},
